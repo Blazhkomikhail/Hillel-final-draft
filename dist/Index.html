@@ -4,85 +4,98 @@
 	<meta charset="utf-8">
 	<title>FinalDraft</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Reset.css">
 	<link rel="stylesheet" type="text/css" href="Styles.css">
 </head>
 <body>
 	<header class="Header">
-		<div class="HeaderWrap">
-			<div class="HeaderLogoWrap">
-				<img src="../Pictures/logo.png" atl="logo">
+		<div class="Header--headerSize">
+			<div class="Header-logoWrap">
+				<div class="Header-logoWrap--bias">
+					<img class="Headers-logo" src="../Pictures/logo.png" atl="logo">
+				</div>
 			</div>
 		</div>		
 	</header>
 	<main class="Main">
-		<section class="SectionUserGate">
-			<div class="HomeScreenWrap">
-				<div class="HomeScreenSlider">
-				  	<!--Здесь будет слайдер-->
-				</div>
+		<section class="SectionHomeScreen">
+			
+			<!--<div class="BackEffect">
+				<div class="BackEffect-elem"></div>
+				<div class="BackEffect-elem"></div>
+			</div>-->
 
-				<div class="UserGate">
-					<h2 class="UserGate-title">Join us now. It's FREE</h2>
-						<div class="UserGate-male">
+			<div class="UserGate">
+				<div class="UserGate--WrapSize">
+					<div class="UserGate-slider">
+						<div class="UserGate-slider--imgSize">
+							<img class="UserGate-sliderImg" src="../Pictures/Slider/Untitled-2.png">
+					  	</div>
+					</div>
 
-							<span class="#">I am</span> 
-							<input type="radio" name="IAmMale">
-							<input type="radio" name="IAmMale">
+					<div class="UserGate-registerForm">
+						<h2 class="UserGate-title">Join us now. It's FREE</h2>
+							<div class="UserGate-male">
 
-							<img src="../Pictures/Icon/Search.png" alt="Search">
+								<span class="#">I am</span> 
+								<input type="radio" name="IAmMale">
+								<input type="radio" name="IAmMale">
 
-							<span class="#">looking for</span> 
-							<input type="radio" name="IAmMale">
-							<input type="radio" name="IAmMale">
-						</div>
+								<img src="../Pictures/Icon/Search.png" alt="Search">
 
-						<div class="UserGate-name">
-							<span class="#">Name</span>
-							<input type="text" name="Name" required>
-						</div>
+								<span class="#">looking for</span> 
+								<input type="radio" name="IAmMale">
+								<input type="radio" name="IAmMale">
+							</div>
 
-						<div class="UserGate-age">
-							<span class="#">Age</span>
-							<select class="AgeDay" name="AgeDay" size="#" required >
-							  <option>Пункт 1</option>
-							  <option>Пункт 2</option>
-							</select>
+							<div class="UserGate-name">
+								<span class="#">Name</span>
+								<input type="text" name="Name" required>
+							</div>
 
-							<select class="AgeMonth" name="AgeMonth" size="#" required >
-							  <option>Пункт 1</option>
-							  <option>Пункт 2</option>
-							</select>
+							<div class="UserGate-age">
+								<span class="#">Age</span>
+								<select class="AgeDay" name="AgeDay" size="#" required >
+								  <option>Пункт 1</option>
+								  <option>Пункт 2</option>
+								</select>
 
-							<select class="AgeYear" name="AgeYear" size="#" required>
-							  <option>Пункт 1</option>
-							  <option>Пункт 2</option>
-							</select>
-						</div>
+								<select class="AgeMonth" name="AgeMonth" size="#" required >
+								  <option>Пункт 1</option>
+								  <option>Пункт 2</option>
+								</select>
 
-						<div class="UserGate-city">
-							<span class="#">City</span>
-							<select class="City" name="City" size="#" required>
-							  <option>Пункт 1</option>
-							  <option>Пункт 2</option>
-							</select>
-						</div>
+								<select class="AgeYear" name="AgeYear" size="#" required>
+								  <option>Пункт 1</option>
+								  <option>Пункт 2</option>
+								</select>
+							</div>
 
-						<div class="UserGate-lifeSkill">
-							<input type="checkbox" name="I'm cool">
-							<span class="#">I'm cool</span><br>
-							<input type="checkbox" name="Life's good">
-							<span class="#">Life's good</span>
-						</div>
+							<div class="UserGate-city">
+								<span class="#">City</span>
+								<select class="City" name="City" size="#" required>
+								  <option>Пункт 1</option>
+								  <option>Пункт 2</option>
+								</select>
+							</div>
 
-						<div class="UserGate-lifeSkill">
-							<input type="radio" name="Drinks">
-							<span class="#">Tee</span><br>
-							
-							<input type="radio" name="Drinks">
-							<span class="#">Beer</span>
-						</div>
+							<div class="UserGate-lifeSkill">
+								<input type="checkbox" name="I'm cool">
+								<span class="#">I'm cool</span><br>
+								<input type="checkbox" name="Life's good">
+								<span class="#">Life's good</span>
+							</div>
 
-					<button class="StartButton">Start Now</button>
+							<div class="UserGate-lifeSkill">
+								<input type="radio" name="Drinks">
+								<span class="#">Tee</span><br>
+								
+								<input type="radio" name="Drinks">
+								<span class="#">Beer</span>
+							</div>
+
+						<button class="StartButton">Start Now</button>
+					</div>
 				</div>
 			</div>
 		</section>
