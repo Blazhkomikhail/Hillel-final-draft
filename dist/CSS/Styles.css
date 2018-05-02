@@ -48,14 +48,14 @@
   border-radius: 3px 0 0 3px;
   border-right: 1px solid #dcdcdc;
 }
-.UserGate-Gender {
-  width: 100%;
-}
 .UserGate-registerForm {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+}
+.UserGate-registerForm--lining {
+  padding-left: 22px;
+  width: 443px;
 }
 .UserGate-title {
   background: linear-gradient(#ffe0c4, #ff8210);
@@ -64,6 +64,61 @@
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 44px;
   font-weight: 300;
+}
+.UserGate-gender {
+  width: 100%;
+}
+.UserGate-name {
+  display: flex;
+  justify-content: space-between;
+}
+.UserGate-age {
+  display: flex;
+  justify-content: space-between;
+}
+.UserGate-city {
+  display: flex;
+  justify-content: space-between;
+}
+.UserGate-startButton {
+  width: 318px;
+  height: 70px;
+  border-radius: 40px;
+}
+.UserGate-selectAgeWrap {
+  display: inline-block;
+  margin-right: 25px;
+}
+.UserGate-lifeBtnWrap {
+  display: flex;
+}
+.UserGate-inputStyle {
+  border: 1px solid #a7a7a7;
+  border-radius: 20px;
+  height: 34px;
+  background: linear-gradient(to top, #fff, #e7e7e8);
+  padding: 0 10px;
+  box-sizing: border-box;
+  box-shadow: inset 2px 2px 0px rgba(205, 205, 205, 0.5);
+}
+.UserGate-inputStyle--inputNameSize {
+  width: 318px;
+  margin-right: 25px;
+}
+.UserGate-inputStyle--inputNameSize:focus {
+  border: 1px solid #eeabab;
+  border-radius: 20px;
+  outline: none;
+}
+.UserGate-inputStyle--selectAge:focus {
+  outline: none;
+}
+.UserGate-inputStyle--selectCity {
+  width: 318px;
+  margin-right: 25px;
+}
+.UserGate-inputStyle--selectCity:focus {
+  outline: none;
 }
 .BackEffect {
   display: flex;
@@ -91,6 +146,11 @@
   z-index: -1;
   opacity: 0;
   margin: 10px 0 0 7px;
+}
+.RadioGender-btnFemale:checked {
+  background-image: url(../../dist/Pictures/Icon/Btn/IconWhiteGirl.png);
+  position: absolute;
+  z-index: 400;
 }
 .RadioGender-btnFemale--btnMale {
   margin: 10px 0 0 20px;
@@ -131,6 +191,7 @@
 }
 .RadioGender-newButton--newBtnTwo:after {
   border-radius: 0 30px 30px 0;
+  box-shadow: inset 0px 3px 2px rgba(180, 97, 22, 0.4);
 }
 .RadioGender-iconBoy {
   position: absolute;
@@ -142,7 +203,27 @@
   left: 18px;
   top: 1px;
 }
+.RadioGender-iconGirl:before {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  transition: .2s;
+  background: url(../../dist/Pictures/Icon/Btn/IconOrangeGirl.png) no-repeat center;
+}
+.RadioGender-iconGirl:after {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  z-index: 100;
+  transition: .2s;
+  background: url(../../dist/Pictures/Icon/Btn/IconWhiteGirl.png) no-repeat center;
+}
 .RadioGender-btnFemale:checked + .RadioGender-newButton:after {
   opacity: 1;
+}
+.RadioGender-btnFemale:checked + .RadioGender--iconGirl:after {
+  opacity: 1;
+  z-index: 5;
 }
 /*font-family: 'Source Sans Pro', sans-serif;*/

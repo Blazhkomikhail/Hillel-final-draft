@@ -23,15 +23,16 @@
 		border-right: 1px solid #dcdcdc;
 	}
 }
-	&-Gender {
-		width: 100%;
-	}
-
+	
 	&-registerForm {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		align-items: center;
+		
+		&--lining {
+			padding-left: 22px;
+			width: 443px;
+		}
 }
 	&-title {
 		background: linear-gradient(#ffe0c4, #ff8210);
@@ -41,4 +42,74 @@
 		font-size: 44px;
 		font-weight: 300;
 	}
+
+	&-gender {
+		width: 100%;
+	}
+	
+	&-name {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-age {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-city {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-startButton {
+		width: 318px;
+		height: 70px;
+		border-radius: 40px;
+	}
+
+	&-selectAgeWrap {
+		display: inline-block;
+		margin-right: 25px;
+	}
+
+	&-lifeBtnWrap {
+		display: flex;
+	}
+		
+	&-inputStyle {
+		border: 1px solid #a7a7a7;
+		border-radius: 20px;
+		height: 34px;
+		background: linear-gradient(to top, #fff, #e7e7e8);
+		padding: 0 10px;
+    	box-sizing: border-box;
+    	box-shadow: inset 2px 2px 0px rgba(205,205,205,.5);
+
+		&--inputNameSize {
+			width: 318px;
+			margin-right: 25px;
+		
+		&:focus {
+			border: 1px solid #eeabab;
+			border-radius: 20px;
+			outline: none;
+		}
+		}
+
+		&--selectAge {
+		
+		&:focus {outline: none;}
+
+		}
+
+		&--selectCity {
+			width: 318px;
+			margin-right: 25px;
+
+		&:focus {outline: none;}
+		}
+
+	}
+	
 }
