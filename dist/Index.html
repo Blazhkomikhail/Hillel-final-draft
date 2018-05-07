@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
 	<title>FinalDraft</title>
+	<meta charset="utf-8">
+	<meta name="discription" content="Финальная работа курса Front-End Basic">
+	<meta name="author" content="Blazhko Mykhail">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/Reset.css">
+	<link rel="stylesheet" type="text/css" href="Slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="CSS/Styles.css">
 </head>
 <body>
@@ -25,24 +29,37 @@
 				<div class="BackEffect-elem"></div>
 			</div>-->
 
-			<div class="UserGate">
-				<div class="UserGate UserGate--WrapSize">
-					<div class="UserGate UserGate-slider">
-						<div class="UserGate UserGate UserGate-slider UserGate-slider--imgSize">
+			<div class="UserGate UserGate--WrapSize">
+				<div class="UserGate UserGate-slider--imgSize">
+					<div class="UserGate UserGate-Slick">
+						<div class="UserGate UserGate-slider"> 	
 							<img class="UserGate UserGate-sliderImg" src="../dist/Pictures/Slider/Untitled-2.png">
 					  	</div>
+					  	<div class="UserGate UserGate-slider"> 	
+							<img class="UserGate UserGate-sliderImg" src="../dist/Pictures/Slider/Untitled-1.png">
+					  	</div>
+					  	<div class="UserGate UserGate-slider"> 	
+							<img class="UserGate UserGate-sliderImg" src="../dist/Pictures/Slider/Untitled-3.png">
+					  	</div>
+					  	<div class="UserGate UserGate-slider"> 	
+							<img class="UserGate UserGate-sliderImg" src="../dist/Pictures/Slider/Untitled-4.png">
+					  	</div>
 					</div>
-
-					<div class="UserGate UserGate-registerForm UserGate-registerForm--lining">
-						<h2 class="UserGate UserGate-title">Join us now. It's FREE</h2>
-
+				</div>
+				<div class="UserGate UserGate-registerForm UserGate-registerForm--lining">
+						<h1 class="UserGate UserGate-title">Join us now. It's FREE</h1>
+						<!--<form action="#" method="POST"-->
 							<div class="UserGate UserGate-gender">
-
-							<label class="RadioGender">I am
+							<span class="UserGate-textIam">I am</span>
+								<div class="UserGate UserGate-genderWrap">
+							<label class="RadioGender">
 								<input type="radio" class="RadioGender RadioGender-btnFemale" name="IAmGender">
 								<span class="RadioGender RadioGender-newButton">
-									<span class="RadioGender-iconGirl"><img  src="Pictures/Icon/Btn/IconOrangeGirl.png" alt="#"></span>
-									<!--<img class="RadioGender RadioGender-iconGirl" src="Pictures/Icon/Btn/IconOrangeGirl.png" alt="#">-->
+									<span class="RadioGender RadioGender-iconGirl"><img  src="Pictures/Icon/Btn/IconOrangeGirl.png" alt="Icon Orange Girl">
+									</span>
+									<span class="RadioGender RadioGender-iconGirl">
+									<img  src="Pictures/Icon/Btn/IconWhiteGirl.png" class="RadioGender RadioGender-imgWhiteGirl" alt="Icon White Girl">
+									</span>
 								</span> 
 							</label>
 
@@ -52,10 +69,14 @@
 									<img class="RadioGender-iconBoy" src="Pictures/Icon/Btn/IconOrangeBoy.png" alt="#">
 								</span> 
 							</label>
-
-								<img src="../dist/Pictures/Icon/Search.png" alt="Search">
-							
-							<label class="RadioGender">looking for
+								
+								<span class="RadioGender RadioGender-searchIconWrap RadioGender-searchIconWrap--iconPosition"> 
+									<img src="../dist/Pictures/Icon/Search.png" class="RadioGender RadioGender-searchIcon" alt="Search">
+								</span>
+								<span class="RadioGender RadioGender-lookForText RadioGender-lookForText--textMargin">
+									looking for
+								</span>
+							<label class="RadioGender">
 								<input type="radio" class="RadioGender RadioGender-btnFemale" name="LookingFor">
 								<span class="RadioGender RadioGender-newButton">
 									<img class="RadioGender RadioGender-iconGirl" src="Pictures/Icon/Btn/IconOrangeGirl.png" alt="#"></span> 
@@ -66,12 +87,12 @@
 									<img class="RadioGender-iconBoy" src="Pictures/Icon/Btn/IconOrangeBoy.png" alt="#">
 								</span> 
 							</label>
-
+								</div>
 							</div>
 
 							<div class="UserGate-name">
 								<span class="#">Name</span>
-								<input type="text" class="UserGate UserGate-inputStyle UserGate-inputStyle--inputNameSize" name="Name" required>
+								<input type="text" id="XXX"class="UserGate UserGate-inputStyle UserGate-inputStyle--inputNameSize" name="Name" required>
 							</div>
 
 							<div class="UserGate UserGate-age">
@@ -103,54 +124,81 @@
 								</select>
 							</div>
 							
-							<div class="UserGate UserGate-lifeBtnWrap">
-								<div class="UserGate-lifeSkill">
-									<input type="checkbox" name="I'm cool">
-									<span class="#">I'm cool</span><br>
-									<input type="checkbox" name="Life's good">
-									<span class="#">Life's good</span>
+							<div class="UserGate UserGate-lifeWrap">
+								<div class="UserGate UserGate-lifeCheckBoxWrap">		<label class="LifeCheckBox">
+										<input type="checkbox" class="LifeCheckBox LifeCheckBox-lifeCheckInput" name="I'm cool">
+										<span class="LifeCheckBox LifeCheckBox-lifeCheckCustom"></span>
+										<span class="LifeCheckBox LifeCheckBox-lifeCheckText">I'm cool</span>
+									</label><br>
+									<label class="LifeCheckBox">
+										<input type="checkbox" class="LifeCheckBox LifeCheckBox-lifeCheckInput" name="Life's good">
+										<span class="LifeCheckBox LifeCheckBox-lifeCheckCustom"></span>
+										<span class="LifeCheckBox LifeCheckBox-lifeCheckText">Life's good</span>
+									</label>
 								</div>
-
-								<div class="UserGate-lifeSkill">
-									<input type="radio" name="Drinks">
-									<span class="#">Tee</span><br>
 									
-									<input type="radio" name="Drinks">
-									<span class="#">Beer</span>
+								
+								<div class="UserGate UserGate-lifeRadioBtnWrap">
+									<label class="LifeRadioBtn">
+										<input type="radio" class="LifeRadioBtn LifeRadioBtn-RadioInput" name="Drinks">
+										<span class="LifeRadioBtn LifeRadioBtn-RadioCustom"></span>
+										<span class="LifeRadioBtn LifeRadioBtn-RadioText">Tee</span><br>
+									</label>
+									<label class="LifeRadioBtn">
+										<input type="radio" class="LifeRadioBtn LifeRadioBtn-RadioInput" name="Drinks">
+										<span class="LifeRadioBtn LifeRadioBtn-RadioCustom"></span>
+										<span class="LifeRadioBtn LifeRadioBtn-RadioText">Beer</span>
+									</label>
 								</div>
 							</div>
-						<button class="UserGate UserGate-startButton">Start Now</button>
+												
+							<div class="UserGate-startButtonWrap">
+								<input type="submit" name="Submit" class="UserGate UserGate-startButton UserGate-startButton--position">
+
+							    <!--<button class="UserGate UserGate-startButton UserGate-startButton--position">Start Now</button>-->
+							</div>
+						</form>	
+					</div>
+		</section>
+		
+		<section class="SectionContentBlock">
+			<div class="ContentBlock ContentBlock-contentWrap ContentBlock-contentWrap--wrapSize">
+			
+				<div class="ContentBlock ContentBlock-codeWrap ContentBlock-codeWrap--size">
+					
+					<h2 class="ContentBlock ContentBlock-codeTitle">Code this block</h2>
+					
+					<div class="ContentBlock ContentBlock-codeContentWrap">
+						<div class="ContentBlock ContentBlock-codeImgWrap ContentBlock-codeImgWrap--size">
+							<img src="../dist/Pictures/Girl.png" class="ContentBlock ContentBlock-codeImg" alt="TopGirl">
+						</div>
+						<span>
+						<p class="ContentBlock ContentBlock-codeText ContentBlock-codeText--size">This text should be changeable. Lorem ipsum text here. Offers great opportunities to everyone looking to meet locals, find romantic dates and make new friends. Our dating site gives you hours of dating fun, together with seemingly endless possibilities to meet new single people from your area, make friends, go on a date and enjoy good company. With thousands of local personals, will make your life a whole lot busier with all that dating. This is a great place to find true friends or devoted partners for long-term relationships or marriage. We believe that the best way to find a compatible romantic partner is to spend time getting to </p>
+						</span>
+					</div>
+				</div>
+	 
+				<div class="UserList">
+					<h2 class="UserList-title">User list</h2>
+					<div class="UserList-slider">
+						<img src="../dist/Pictures/User1.png">
+						<img src="../dist/Pictures/User2.png">
+						<img src="../dist/Pictures/User3.png">
+						<img src="../dist/Pictures/User4.png">
+						<img src="../dist/Pictures/User5.png">
 					</div>
 				</div>
 			</div>
 		</section>
-		
-		<section class="ContentBlock">
-
-			<div class="CodeThisBlock">
-				<h3 class="CodeThisBlock-title">Code this block</h3>
-				<img src="../dist/Pictures/Girl.png">
-				<p class="CodeThisBlock-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
- 
-			<div class="UserList">
-				<h3 class="UserList-title">Code this block</h3>
-				<div class="UserList-slider">
-					<img src="../dist/Pictures/User1.png">
-					<img src="../dist/Pictures/User2.png">
-					<img src="../dist/Pictures/User3.png">
-					<img src="../dist/Pictures/User4.png">
-					<img src="../dist/Pictures/User5.png">
-				</div>
-			</div>
-
-		</section>
-
+<!--
 		<section class="SectionTips">
-			<h3 class="SectionTips-title">How to succeed in online dating</h3>
+			<h2 class="SectionTips-title">How to succeed in online dating</h2>
 			<p class="SectionTips-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-		</section>
+		</section>-->
 	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="Slick/slick.min.js"></script>
+	<script type="text/javascript" src="JS/JS.js"></script>
 </body>
 </html>

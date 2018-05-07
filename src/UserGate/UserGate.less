@@ -45,6 +45,13 @@
 
 	&-gender {
 		width: 100%;
+		display: flex;
+	}
+
+	&-genderWrap {
+		width: 80%;
+		position: relative;
+    	right: -73px;
 	}
 	
 	&-name {
@@ -62,17 +69,46 @@
 		justify-content: space-between;
 	}
 
+	&-startButtonWrap {
+		display: flex;
+    	justify-content: flex-end;
+
+    }
+
 	&-startButton {
 		width: 318px;
-		height: 70px;
+		height: 66px;
 		border-radius: 40px;
+		border: 1px solid #fff;
+    	box-shadow: 0px 0px 0px 1px rgba(127,166,7,1);
+		outline: none;
+		cursor: pointer;
+		background-color: #a5c631;
+		background-image: linear-gradient(#a5c631 50%, #72aa00 20%, #a5c631);
+
+		&--position {
+    		position: relative;
+    		right: 24px;
+    	}
 	}
 
 	&-selectAgeWrap {
 		display: inline-block;
 		margin-right: 25px;
 	}
+	
+	&-lifeCheckBoxWrap { /*объединить*/
+		display: flex;
+   	 	flex-direction: column;
+   		justify-content: space-between;
+	}
 
+	&-lifeRadioBtnWrap { /*объединить*/
+		display: flex;
+    	flex-direction: column;
+    	justify-content: space-between;
+	}
+	
 	&-lifeBtnWrap {
 		display: flex;
 	}
@@ -109,7 +145,13 @@
 
 		&:focus {outline: none;}
 		}
-
 	}
+
+		&-lifeWrap {
+			display: flex;
+			justify-content: space-evenly;
+		}
+
+
 	
 }

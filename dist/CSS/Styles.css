@@ -67,6 +67,12 @@
 }
 .UserGate-gender {
   width: 100%;
+  display: flex;
+}
+.UserGate-genderWrap {
+  width: 80%;
+  position: relative;
+  right: -73px;
 }
 .UserGate-name {
   display: flex;
@@ -80,14 +86,40 @@
   display: flex;
   justify-content: space-between;
 }
+.UserGate-startButtonWrap {
+  display: flex;
+  justify-content: flex-end;
+}
 .UserGate-startButton {
   width: 318px;
-  height: 70px;
+  height: 66px;
   border-radius: 40px;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 0px 1px #7fa607;
+  outline: none;
+  cursor: pointer;
+  background-color: #a5c631;
+  background-image: linear-gradient(#a5c631 50%, #72aa00 20%, #a5c631);
+}
+.UserGate-startButton--position {
+  position: relative;
+  right: 24px;
 }
 .UserGate-selectAgeWrap {
   display: inline-block;
   margin-right: 25px;
+}
+.UserGate-lifeCheckBoxWrap {
+  /*объединить*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.UserGate-lifeRadioBtnWrap {
+  /*объединить*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .UserGate-lifeBtnWrap {
   display: flex;
@@ -119,6 +151,10 @@
 }
 .UserGate-inputStyle--selectCity:focus {
   outline: none;
+}
+.UserGate-lifeWrap {
+  display: flex;
+  justify-content: space-evenly;
 }
 .BackEffect {
   display: flex;
@@ -155,28 +191,34 @@
 .RadioGender-btnFemale--btnMale {
   margin: 10px 0 0 20px;
 }
+.RadioGender-searchIconWrap--iconPosition {
+  margin: 0 10px 0 15px;
+}
+.RadioGender-lookForText--textMargin {
+  margin-right: 15px;
+}
 .RadioGender-newButton {
   position: relative;
   padding: 5px 0 0 46px;
 }
-.RadioGender-newButton:before {
+.RadioGender-newButton::before {
   content: '';
   position: absolute;
   top: -3px;
   left: 0;
   width: 45px;
-  height: 35px;
+  height: 34px;
   border: 1px solid #947024;
   border-radius: 30px 0 0 30px;
   background: linear-gradient(to top, #e7e7e7, #FFF);
 }
-.RadioGender-newButton:after {
+.RadioGender-newButton::after {
   content: '';
   position: absolute;
   top: -2px;
   left: 1px;
   width: 45px;
-  height: 35px;
+  height: 34px;
   border-radius: 30px 0 0 30px;
   background: linear-gradient(to top, #ffad03, #f98a1b);
   box-shadow: inset 2px 3px 0px rgba(180, 97, 22, 0.4);
@@ -186,10 +228,10 @@
 .RadioGender-newButton--newBtnTwo {
   padding: 5px 0 0 46px;
 }
-.RadioGender-newButton--newBtnTwo:before {
+.RadioGender-newButton--newBtnTwo::before {
   border-radius: 0 30px 30px 0;
 }
-.RadioGender-newButton--newBtnTwo:after {
+.RadioGender-newButton--newBtnTwo::after {
   border-radius: 0 30px 30px 0;
   box-shadow: inset 0px 3px 2px rgba(180, 97, 22, 0.4);
 }
@@ -202,28 +244,140 @@
   position: absolute;
   left: 18px;
   top: 1px;
+  /*	&::before {
+		content: '';
+	    position: absolute;
+	    opacity: 0;
+	     z-index: -1;
+	    transition: .2s;
+	    background: url(../../dist/Pictures/Icon/Btn/IconOrangeGirl.png) no-repeat center;
+	}
+
+		&::after {
+		content: '';
+	    position: absolute;
+	    opacity: 0;
+	    z-index: 100;
+	    transition: .2s;
+	    background: url(../../dist/Pictures/Icon/Btn/IconWhiteGirl.png) no-repeat center;
+		}*/
 }
-.RadioGender-iconGirl:before {
-  content: '';
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-  transition: .2s;
-  background: url(../../dist/Pictures/Icon/Btn/IconOrangeGirl.png) no-repeat center;
+.RadioGender-imgWhiteGirl {
+  display: none;
 }
-.RadioGender-iconGirl:after {
-  content: '';
-  position: absolute;
-  opacity: 0;
-  z-index: 100;
-  transition: .2s;
-  background: url(../../dist/Pictures/Icon/Btn/IconWhiteGirl.png) no-repeat center;
-}
-.RadioGender-btnFemale:checked + .RadioGender-newButton:after {
+.RadioGender-btnFemale:checked + .RadioGender-newButton::after {
   opacity: 1;
 }
-.RadioGender-btnFemale:checked + .RadioGender--iconGirl:after {
-  opacity: 1;
-  z-index: 5;
+/*.RadioGender-btnFemale:checked + .RadioGender--iconGirl:after {
+  		opacity: 1;
+  		 z-index: 5;
+	}*/
+.LifeCheckBox-lifeCheckInput {
+  display: none;
+}
+.LifeCheckBox-lifeCheckText {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.LifeCheckBox-lifeCheckCustom {
+  position: relative;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+  border-right: 1px solid #a2a2a2;
+  border-bottom: 1px solid #a2a2a2;
+  transition: .2s;
+}
+.LifeCheckBox-lifeCheckInput:checked + .LifeCheckBox-lifeCheckCustom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  bottom: 2px;
+  left: 1px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #ffba2f;
+  border-left: 1px solid #ffba2f;
+  border-right: 1px solid #c46b16;
+  border-bottom: 1px solid #c46b16;
+  background: linear-gradient(to top, #ff8e1b, #ffa906);
+  transition: 2s;
+}
+.LifeCheckBox--position {
+  width: 35%;
+  margin-left: 98px;
+}
+.LifeRadioBtn-RadioInput {
+  display: none;
+}
+.LifeRadioBtn-RadioCustom {
+  position: relative;
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+  border-right: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  cursor: pointer;
+}
+.LifeRadioBtn-RadioText {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.LifeRadioBtn-RadioInput:checked + .LifeRadioBtn-RadioCustom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  bottom: 2px;
+  left: 1px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #ff8e1b, #ffa906);
+  border-top: 1px solid #ffba2f;
+  border-left: 1px solid #ffba2f;
+  border-right: 1px solid #ff8e1b;
+  border-bottom: 1px solid #ff8e1b;
+}
+.ContentBlock-contentWrap {
+  display: flex;
+  justify-content: space-between;
+}
+.ContentBlock-contentWrap--wrapSize {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.ContentBlock-codeWrap--size {
+  width: 50%;
+}
+.ContentBlock-codeImgWrap {
+  overflow: hidden;
+  float: left;
+  shape-outside: circle(50%);
+  border-radius: 50%;
+}
+.ContentBlock-codeImgWrap--size {
+  width: 174px;
+  height: 174px;
+  margin-right: 13px;
+}
+.ContentBlock-codeImg {
+  margin: 0px 0px 0px -70px;
+}
+.ContentBlock-codeText--size {
+  margin: 0 12px;
 }
 /*font-family: 'Source Sans Pro', sans-serif;*/

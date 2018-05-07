@@ -1,0 +1,2 @@
+$('.UserGate-Slick').slick();
+
