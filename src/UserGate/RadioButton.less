@@ -87,36 +87,24 @@
 		position: absolute;
 		left: 18px;
     	top: 1px;
-		
-	/*	&::before {
+    	
+    	&::after {
 		content: '';
-	    position: absolute;
-	    opacity: 0;
-	     z-index: -1;
+	    position: relative;
+	    z-index: 2;
 	    transition: .2s;
-	    background: url(../../dist/Pictures/Icon/Btn/IconOrangeGirl.png) no-repeat center;
-	}
-
-		&::after {
-		content: '';
-	    position: absolute;
 	    opacity: 0;
-	    z-index: 100;
-	    transition: .2s;
 	    background: url(../../dist/Pictures/Icon/Btn/IconWhiteGirl.png) no-repeat center;
-		}*/
+	    }
    	}
 	
-	&-imgWhiteGirl {
-		display: none;
 	}
-}
 	.RadioGender-btnFemale:checked + .RadioGender-newButton::after {
   		opacity: 1;
 	}
 
-	/*.RadioGender-btnFemale:checked + .RadioGender--iconGirl:after {
+	.RadioGender-btnFemale:checked + .RadioGender-iconGirl::after {
   		opacity: 1;
-  		 z-index: 5;
-	}*/
-	
+  		position: relative;
+	    z-index: 2;
+	}
