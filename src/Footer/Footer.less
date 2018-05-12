@@ -1,5 +1,6 @@
 .Footer {
-	&-mainWrap {
+	
+  &-mainWrap {
 
 		max-width: 960px;
 		margin: 20px auto;
@@ -8,52 +9,91 @@
 			max-height: 500px;
 		}
 	}
+
+  &-title {
+
+    &--size {
+      margin: 20px 0px 20px 10px;
+      .h2TitleFont  
+    }
+  }
 	
 	&-textWrap {
 		column-count: 3;
-   	}
+  }
 
-   	&-text {
-   		margin: 16px;
+  &-text {
+    margin: 12px;
+       
+    &--firstSize {
+      margin-top: 0px;
+    }
 
-   		&--border {
-   			border-left: 3px solid #ffc28c;
-   			padding-left: 18px;
-   		}
-   	}
+    &--font {
+      .contentBlocksFont
+    }
 
-   	&-link {
+    &--border {
+      border-left: 3px solid #ffc28c;
+      padding-left: 18px;
+      color: #ffa95e;
+    }
+  }
 
-   		&--position {
+   &-textQuotes {
+
+    &--textPosition {
+      padding: 0px 41px 0px 25px;
+      margin-left: 14px;
+      margin-right: 10px;
+      color: #a1a1a1;
+    }
+  }
+
+  &-quoteTextWrap {
+    position: relative;
+    
+    &::before,
+    &::after {
+      position: absolute; 
+      font-size: 3em; 
+      color: #cfcfcf; 
+    }
+
+    &::before {
+      content: '\201c';
+      left: 12px;
+    }
+
+    &::after {
+      content: '\201d';
+      bottom: -28px;
+      right: 30px;
+    }
+  }
+
+  &-link {
+
+   	&--position {
    		position: relative;
     	left: 130px;
-    	}
-   	}
-
-   	&-textQuotes {
-
-   		&--textPosition {
-   		padding: 0px 41px 0px 25px;
-   		margin-left: 14px;
-   		margin-right: 10px;
-   		}
-   	}
-
-	&-quoteTop{
-
-		&--position {
-   	    position: relative;
-	    bottom: -17px;
-    	right: -16px;
-    	}
+      top: 30px;
+    }
+    
+    & a {
+      color: #ffc28c;
     }
 
-    &-quoteBottom {
-
-    	&--position {
-    	position: relative;
-    	left: 260px;
-    	top: -15px;
-   		}
+    & a:hover {
+      color: #ffa95e;
     }
+  }
+
+  &-bottomBorder {
+    border: 1px solid #cfcfcf;
+
+    &--position {
+      margin: 50px 12px 0px 12px;
+    }
+  }
 }
