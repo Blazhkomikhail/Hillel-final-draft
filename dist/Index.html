@@ -24,12 +24,11 @@
 	<main class="Main">
 		<section class="SectionHomeScreen">
 			
-			<!--<div class="BackEffect">
-				<div class="BackEffect-elem"></div>
-				<div class="BackEffect-elem"></div>
-			</div>-->
-
-			<div class="UserGate UserGate--WrapSize">
+			<div class="SectionHomeScreen-backEffectWrapp">
+				<div class="SectionHomeScreen-backEffect"></div>
+				<div class="SectionHomeScreen-backEffect"></div>
+			</div>
+			<div class="UserGate UserGate--wrapSize">
 				<div class="UserGate UserGate-slider--imgSize">
 					<div class="UserGate UserGate-Slick">
 						<div class="UserGate UserGate-slider"> 	
@@ -46,109 +45,170 @@
 					  	</div>
 					</div>
 				</div>
-					<div class="UserGate UserGate-registerForm UserGate-registerForm--lining">
-						<h1 class="UserGate UserGate-title">Join us now. It's FREE</h1>
-						
-							<div class="UserGate UserGate-gender">
-								<span class="UserGate-textIam">I am</span>
-								<div class="UserGate UserGate-genderWrap">
-									<label class="RadioGender">
-										<input type="radio" class="RadioGender RadioGender-btnFemale" name="IAmGender">
-										<span class="RadioGender RadioGender-newButton">
-											<span class="RadioGender RadioGender-iconGirl"><img  src="Pictures/Icon/Btn/IconOrangeGirl.png" alt="Icon Orange Girl">
-											</span>
-											<span class="RadioGender RadioGender-iconGirl">
-											<!--<img  src="Pictures/Icon/Btn/IconWhiteGirl.png" class="RadioGender RadioGender-imgWhiteGirl" alt="Icon White Girl">-->
-											</span>
-										</span> 
-									</label>
 
-									<label class="RadioGender">
-										<input type="radio" class="RadioGender RadioGender-btnFemale RadioGender-btnFemale--btnMale" name="IAmGender">
-										<span class="RadioGender RadioGender-newButton RadioGender-newButton--newBtnTwo">
-											<img class="RadioGender-iconBoy" src="Pictures/Icon/Btn/IconOrangeBoy.png" alt="#">
-										</span> 
-									</label>
+				<div class="UserGate UserGate-registerForm UserGate-registerForm--lining">
+					<h1 class="UserGate UserGate-title UserGate-title--position">Join us now. It's FREE</h1>
+					<div class="UserGate UserGate-mainInputWrapp">
+						<div class="UserGate UserGate-itemName UserGate-itemName--position">
+							<span>I am</span>
+							<span>Name</span>
+							<span>Age</span>
+							<span>City</span>
+						</div>
+
+						<div class="UserGate UserGate-inputWrapp UserGate-inputWrapp--size">
+							<div class="UserGate UserGate-gender">
+								<label class="RadioGender">
+									<input type="radio" class="RadioGender RadioGender-btnFemale" name="IAmGender" checked>
+									<span class="RadioGender RadioGender-newButton">
+										<span class="RadioGender RadioGender-iconGirl"><img  src="Pictures/Icon/Btn/IconOrangeGirl.png" alt="Icon Orange Girl">
+										</span>
+										<span class="RadioGender RadioGender-iconGirl">
+										</span>
+									</span> 
+								</label>
+
+								<label class="RadioGender">
+									<input type="radio" class="RadioGender RadioGender-btnFemale RadioGender-btnFemale--btnMale" name="IAmGender">
+									<span class="RadioGender RadioGender-newButton RadioGender-newButton--newBtnTwo">
+										<img class="RadioGender-iconBoy" src="Pictures/Icon/Btn/IconOrangeBoy.png" alt="#">
+									</span> 
+								</label>
 								
-									<span class="RadioGender RadioGender-searchIconWrap RadioGender-searchIconWrap--iconPosition"> 
-										<img src="../dist/Pictures/Icon/Search.png" class="RadioGender RadioGender-searchIcon" alt="Search">
-									</span>
-									<span class="RadioGender RadioGender-lookForText RadioGender-lookForText--textMargin">
-									looking for</span>
-									<label class="RadioGender">
-										<input type="radio" class="RadioGender RadioGender-btnFemale" name="LookingFor">
+								<span class="RadioGender RadioGender-searchIconWrap RadioGender-searchIconWrap--iconPosition"> 
+									<img src="../dist/Pictures/Icon/Search.png" class="RadioGender RadioGender-searchIcon" alt="Search">
+								</span>
+								<span class="RadioGender RadioGender-lookForText RadioGender-lookForText--textMargin">looking for
+								</span>
+								<label class="RadioGender">
+									<input type="radio" class="RadioGender RadioGender-btnFemale" name="LookingFor">
 										<span class="RadioGender RadioGender-newButton">
 											<img class="RadioGender RadioGender-iconGirl" src="Pictures/Icon/Btn/IconOrangeGirl.png" alt="#">
 										</span> 
-									</label>
+								</label>
 							
-									<label class="RadioGender">
-										<input type="radio" class="RadioGender RadioGender-btnFemale RadioGender-btnFemale--btnMale"" name="LookingFor">
-										<span class="RadioGender RadioGender-newButton RadioGender-newButton--newBtnTwo">
-											<img class="RadioGender-iconBoy" src="Pictures/Icon/Btn/IconOrangeBoy.png" alt="#">
-										</span> 
-									</label>
-								</div>
+								<label class="RadioGender">
+									<input type="radio" class="RadioGender RadioGender-btnFemale RadioGender-btnFemale--btnMale"" name="LookingFor" checked>
+									<span class="RadioGender RadioGender-newButton RadioGender-newButton--newBtnTwo">
+										<img class="RadioGender-iconBoy" src="Pictures/Icon/Btn/IconOrangeBoy.png" alt="#">
+									</span> 
+								</label>
 							</div>
 
 							<div class="UserGate-name">
-								<span class="#">Name</span>
 								<input type="text" id="XXX" class="UserGate UserGate-inputStyle UserGate-inputStyle--inputNameSize" name="Name" required>
+								<label class="UserGate UserGate-Namelabel UserGate-Namelabel--position">
+									<img src="Pictures/Icon/Error.png" alt="Error">
+									<div class="UserGate UserGate-nameErrorAlert">Enter your name</div>
+								</label>
 							</div>
 
 							<div class="UserGate UserGate-age">
-								<span class="#">Age</span>
-								<div class="UserGate UserGate-selectAgeWrap">
-									<select class="UserGate UserGate-inputStyle UserGate-inputStyle--selectAge placeholder="Day" name="AgeDay" size="#" required>
-									  <option class="UserGate-itemDay">Day</option>
-									  <option>1</option>
-									  <option>2</option>
-									  <option>3</option>
-									  <option>4</option>
-									  <option>5</option>
-									  <option>6</option>
-									  <option>7</option>
-									  <option>8</option>
-									  <option>9</option>
-									  <option>10</option>
-									  <option>11</option>
-									  <option>12</option>
-									  <option>13</option>
-									  <option>14</option>
-									</select>
-
-									<select class="UserGate UserGate-inputStyle UserGate-inputStyle--selectAge" name="AgeMonth" size="#" required >
-									  <option>Пункт 1</option>
-									  <option>Пункт 2</option>
-									</select>
-
-									<select class="UserGate UserGate-inputStyle UserGate-inputStyle--selectAge" name="AgeYear" size="#" required>
-									  <option>Пункт 1</option>
-									  <option>Пункт 2</option>
+								<div class="Age Age-selectWrap Age-selectWrap--selectDay">
+									<select class="Age Age-select name="AgeDay" size="#" required>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option selected>12</option>
+										<option>13</option>
+										<option>14</option>
+										<option>15</option>
+										<option>16</option>
+										<option>17</option>
+										<option>18</option>
+										<option>19</option>
+										<option>20</option>
+										<option>21</option>
+										<option>22</option>
+										<option>24</option>
+										<option>25</option>
+										<option>26</option>
+										<option>27</option>
+										<option>28</option>
+										<option>29</option>
+										<option>30</option>
+										<option>31</option>
 									</select>
 								</div>
+									
+								<div class="Age Age-selectWrap Age-selectWrap--selectMonth">
+									<select class="Age Age-select" name="AgeMonth" size="#" required >
+									    <option>january</option>
+										<option>fabruary</option>
+										<option>march</option>
+										<option>april</option>
+										<option>may</option>
+										<option>june</option>
+										<option>july</option>
+										<option>august</option>
+										<option>september</option>
+										<option selected>october</option>
+										<option>november</option>
+										<option>december</option>
+										</select>
+								</div>
+
+								<div class="Age Age-selectWrap Age-selectWrap--selectYear">
+									<select class="Age Age-select" name="AgeYear" size="#" required>
+										<option>1985</option>
+									  	<option>1986</option>
+										<option>1987</option>
+										<option>1988</option>
+										<option>1989</option>
+										<option>1990</option>
+										<option>1991</option>
+										<option>1992</option>
+										<option>1993</option>
+										<option>1994</option>
+										<option>1995</option>
+										<option>1996</option>
+										<option>1997</option>
+										<option>1998</option>
+										<option>1999</option>
+										<option>2000</option>
+									</select>
+								</div>
+								<label class="Age Age-labelCorrect Age-labelCorrect--position">
+									<img src="Pictures/Icon/Ok.png" alt="Correct">
+								</label>
 
 							</div>
 
-							<div class="UserGate-city">
-								<span class="#">City</span>
-								<select class="UserGate UserGate-inputStyle UserGate-inputStyle--selectCity" name="City" size="#" required>
-								  <option>Пункт 1</option>
-								  <option>Пункт 2</option>
+							<div class="City City-cityWrap">
+								<select class="City City-selectCity" name="City" size="#" required>
+									<option>London</option>
+									<option>Paris</option>
+									<option>Kyiv</option>
+									<option>Oslo</option>
+									<option>Monaco</option>
+									<option>Budapest</option>
+									<option>Madrid</option>
+									<option>Riga</option>
+									<option>Berlin</option>
+									<option>Stockholm</option>
 								</select>
 							</div>
 							
-							<div class="UserGate UserGate-lifeWrap">
-								<div class="UserGate UserGate-lifeCheckBoxWrap">		<label class="LifeCheckBox">
+							<div class="UserGate UserGate-lifeWrap UserGate-lifeWrap--size">
+								<div class="UserGate UserGate-lifeCheckBoxWrap">			<label class="LifeCheckBox">
 										<input type="checkbox" class="LifeCheckBox LifeCheckBox-lifeCheckInput" name="I'm cool">
 										<span class="LifeCheckBox LifeCheckBox-lifeCheckCustom"></span>
 										<span class="LifeCheckBox LifeCheckBox-lifeCheckText">I'm cool</span>
-									</label><br>
+									</label>
+
 									<label class="LifeCheckBox">
 										<input type="checkbox" class="LifeCheckBox LifeCheckBox-lifeCheckInput" name="Life's good">
 										<span class="LifeCheckBox LifeCheckBox-lifeCheckCustom"></span>
 										<span class="LifeCheckBox LifeCheckBox-lifeCheckText">Life's good</span>
-									</label>
+										</label>
 								</div>
 									
 								
@@ -158,6 +218,7 @@
 										<span class="LifeRadioBtn LifeRadioBtn-RadioCustom"></span>
 										<span class="LifeRadioBtn LifeRadioBtn-RadioText">Tee</span><br>
 									</label>
+									
 									<label class="LifeRadioBtn">
 										<input type="radio" class="LifeRadioBtn LifeRadioBtn-RadioInput" name="Drinks">
 										<span class="LifeRadioBtn LifeRadioBtn-RadioCustom"></span>
@@ -168,12 +229,11 @@
 												
 							<div class="UserGate-startButtonWrap">
 								<input type="submit" value="Start Now" name="Submit" class="UserGate UserGate-startButton UserGate-startButton--position">
-
-							    <!--<button class="UserGate UserGate-startButton UserGate-startButton--position">Start Now</button>-->
 							</div>
-						
+						</div>
 					</div>
 				</div>
+			</div>
 		</section>
 		
 		<section class="SectionContentBlock">
@@ -231,7 +291,6 @@
 					        </div>
 					    </div>
 					</div>
-
 				</div>	
 		</section>
 

@@ -15,14 +15,14 @@
 	&-searchIconWrap {
 		
 		&--iconPosition{
-			margin: 0 10px 0 13px;
+			margin: 0 11px 0 13px;
 		}
 	}
 
 	&-lookForText {
 
 		&--textMargin {
-			margin-right: 10px;
+			margin-right: 12px;
 		}
 	}
 
@@ -55,6 +55,9 @@
 	    opacity: 0;
 	    transition: .2s;
 	    padding-top: 2px;
+	    display: flex;
+    	justify-content: center;
+    	align-items: center;
 	}
 	
 	&--newBtnTwo {
@@ -87,8 +90,5 @@
 
 	.RadioGender-btnFemale:checked + .RadioGender-newButton::after {
   		opacity: 1;
-  		display: flex;
-    	justify-content: center;
-    	align-items: center;
-	}
+  	}
 }

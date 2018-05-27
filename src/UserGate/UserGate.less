@@ -1,16 +1,16 @@
 .UserGate {
-
 	
-	&--WrapSize {
+	&--wrapSize {
 		max-width: 960px;
 		height: 466px;
-		margin: 0 auto;
+		margin: 20px auto;
 		display: flex;
 		border-radius: 3px;
 		box-shadow: 0px 0px 2px 0px;
 		background-color: #f8f8f8;
 		position: relative;
 		
+
 		&::before, &::after {
 			z-index: 0;
 			position: absolute;
@@ -42,6 +42,34 @@
 		}
 	}
 
+	&-mainInputWrapp {
+		display: flex;
+	}
+
+	&-itemName {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&--position {
+			margin-left: 20px;
+			height: 163px;
+			padding-top: 15px;
+		}
+	}
+
+	&-inputWrapp {
+		display: flex;
+    	flex-direction: column;
+    	justify-content: space-evenly;
+
+		&--size {
+			width: 350px;
+			height: 370px;
+			margin-left: 54px;
+		}
+	}	
+
     &-slider {
 		max-width: 100%;
 		max-height: 100%;
@@ -66,14 +94,10 @@
 	}
 
 	&-registerForm {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-	
+		
 		&--lining {
-			padding-left: 22px;
-    		padding-right: 15px;
-    		width: 458px;
+			box-sizing: border-box;
+    		width: 480px;
     		background: #fff;
     		z-index: 1;
     		border-radius: 0px 3px 3px 0px;
@@ -87,6 +111,10 @@
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 44px;
 		font-weight: 300;
+
+		&--position {
+			margin: 22px 0 22px 20px;
+		}
 	}
 
 	&-gender {
@@ -94,31 +122,58 @@
 		display: flex;
 	}
 
-	&-genderWrap {
-		width: 80%;
-		position: relative;
-    	right: -73px;
-	}
-	
 	&-name {
 		display: flex;
 		justify-content: space-between;
 	}
 
+	&-nameErrorAlert {
+	width: 178px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    right: -173px;
+    top: 116px;
+
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    color: #fff;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Trebuchet MS Regular;
+    font-size: 16px;
+
+    	&::before {
+    		content: "";
+		    width: 0;
+		    height: 0;
+		    right: 100%;
+		    top: 30px;
+		    position: absolute;
+		    border-top: 10px solid transparent;
+		    border-right: 10px solid rgba(0, 0, 0, 0.8);
+		    border-bottom: 8px solid transparent;
+    	}
+    }
+
+    &-Namelabel {
+
+    	&--position {
+    		padding-top: 6px;
+    		padding-right: 8px;
+    	}
+    }
+
 	&-age {
 		display: flex;
-		justify-content: space-between;
-	}
-
-	&-city {
-		display: flex;
-		justify-content: space-between;
 	}
 
 	&-startButtonWrap {
-		display: flex;
-    	justify-content: flex-end;
-
+		max-width: 100%;
     }
 
 	&-startButton {
@@ -131,29 +186,31 @@
 		cursor: pointer;
 		background-color: #a5c631;
 		background-image: linear-gradient(#a5c631 50%, #72aa00 20%, #a5c631);
-
-		&--position {
-    		position: relative;
-    		right: 24px;
-			.startButtonFont
-    	}
+		margin-top: 10px;
+		.startButtonFont
+    	
 	}
 
-	&-selectAgeWrap {
-		display: inline-block;
-		margin-right: 25px;
+	&-lifeWrap {
+		display: flex;
+
+		&--size {
+		height: 50px;
+		}
 	}
-	
+
 	&-lifeCheckBoxWrap,
 	&-lifeRadioBtnWrap {
 		display: flex;
    	 	flex-direction: column;
    		justify-content: space-between;
+   		width: 50%;
 	}
 	
-	&-lifeBtnWrap {
-		display: flex;
+	&-lifeCheckBoxWrap {
+		padding-left: 5px;
 	}
+
 		
 	&-inputStyle {
 		border: 1px solid #a7a7a7;
@@ -165,37 +222,14 @@
     	box-shadow: inset 2px 2px 0px rgba(205,205,205,.5);
 		outline: none;
 
-	&--inputNameSize {
-		width: 318px;
-		margin-right: 25px;
-		
+		&--inputNameSize {
+			width: 318px;
+			
 		&:focus {
 			border: 1px solid #eeabab;
 			border-radius: 20px;
 			outline: none;
 		}
 	}
-
-	&--selectAge {
-		
-		&:focus {outline: none;}
-		}
-
-	&-itemDay {
-		.userListFont
 	}
-
-	&--selectCity {
-		width: 318px;
-		margin-right: 25px;
-
-		&:focus {outline: none;}
-		}
-	}
-
-	&-lifeWrap {
-		display: flex;
-		justify-content: space-evenly;
-		}
-		
 }
